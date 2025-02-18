@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Site</title>
+    <style>
+        /* Body CSS */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+            flex-direction: column;
+        }
+
+        /* Header Image */
+        header img {
+            width: 100%;
+            height: auto;
+        }
+
+        /* Introduction Section */
+        .intro {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .intro h2 {
+            margin-bottom: 10px;
+        }
+
+        .intro p {
+            font-size: 1.2em;
+            color: #333;
+        }
+
+        /* Main Container */
+        .container {
+            text-align: center;
+            border: 0.1px solid blue;
+           border-radius:10px;
+            padding: 10px;
+        }
+
+        /* Main Box Styling */
+        .main-box {
+            width: 200px;
+            padding: 20px;
+            background-color: #007bff;
+            color: white;
+            border: 1px solid #0056b3;
+            cursor: pointer;
+            text-align: center;
+            margin: 0 auto 20px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .main-box:hover {
+            background-color: #0056b3;
+        }
+
+        /* Hidden Boxes Container */
+        .hidden-boxes {
+            display: none;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin-top: 20px;
+        }
+
+        /* Box Styling */
+        .hidden-boxes .box {
+            width: 150px;
+            height: 150px;
+            padding: 10px;
+            background-color: #e0e0e0;
+            border: 2px solid blue;
+            text-align: center;
+            border-radius: 9px;
+            transition: transform 1.3s ease;
+        }
+
+        .hidden-boxes .box:hover {
+            transform: scale(1.05);
+        }
+
+        /* Image Styling */
+        .hidden-boxes .box img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+
+        /* Button Styling 007bff  */
+        .hidden-boxes .box button {
+            margin-top: 10px;
+            padding: 5px;
+            background-color:#007bff;
+            color: white;
+            border:none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .hidden-boxes .box button:hover {
+            background-color: #0056b3;
+        }
+
+        /* Show Hidden Boxes */
+        .show {
+            display: grid;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Image -->
+    <header>
+        <img src="https://i.postimg.cc/Pf8gZWY3/IMG-20250217-202051.jpg" alt="Header Image">
+    </header>
+
+    <!-- Introduction Section -->
+    <section class="intro">
+      
+         <h3>|Devinder Singh|</h3>
+      
+        <h2>Welcome to DV Globale Empire</h2>
+        <p>If you love reading books but struggle with time, DV Globale Empire is perfect for you. Here, you’ll find short and easy-to-understand summaries of the most insightful books. From self-help to life-changing reads, you can absorb crisp and valuable content in just a short time. It will greatly help you in gaining knowledge. Thank you</p>
+    
+    <a href="https://youtube.com/@dvglobalempire9477?si=y7BS2VU7Sm-N3WXO" style="padding: 10px; background: blue; color: white; text-decoration: none; border-radius: 5px;">view channel</a>
+
+    </section>
+
+    <div class="container">
+        <!-- Main Box -->
+        <div class="main-box" onclick="toggleBoxes(event)">
+            view books (click me)
+        </div>
+
+        <!-- Hidden Boxes -->
+        <div class="hidden-boxes" id="hiddenBoxes">
+            <div class="box">
+                <img src="https://i.postimg.cc/sD89WLdq/IMG-20250217-202936.jpg " alt="Placeholder Image">
+                <button onclick="window.location.href='https://youtube.com/playlist?list=PLXubVE5Ir37vkRCgKVeXL4jB44XKwKC6G&si=b_81nDC2FXphD-0X'">check out</button>
+            </div>
+            <div class="box">
+                <img src="https://i.postimg.cc/xd8bSsS0/IMG-20250217-153103.jpg" alt="Placeholder Image">
+                <button onclick="window.location.href='https://youtube.com/playlist?list=PLXubVE5Ir37tN1tTP5NuS73EmyuGKPSek&si=hp_1jMXVzcpxQ176'">Check out</button>
+            </div>
+            <div class="box">
+                <img src="https://i.postimg.cc/SNV6FYzf/IMG-20250217-153306.jpg" alt="Placeholder Image">
+                <button onclick="window.location.href='https://youtube.com/playlist?list=PLXubVE5Ir37ucZ2ykNyjxxUr92oAARcYY&si=uIUmxLF_ownyGQsF'">Check out</button>
+            </div>
+            <div class="box">
+                <img src="https://i.postimg.cc/dt07CHLG/IMG-20250217-153441.jpg" alt="Placeholder Image">
+                <button onclick="window.location.href='https://youtube.com/playlist?list=PLXubVE5Ir37s3G80uXEmN5n8fw55FiEbv&si=eh1jtDVvi1d4KEDP'">Check out</button>
+            </div>
+            <div class="box">
+                <img src="https://i.postimg.cc/YqfHpMp3/IMG-20250217-153631.jpg" alt="Placeholder Image">
+                <button onclick="window.location.href='https://youtube.com/playlist?list=PLXubVE5Ir37vwjrVercVbZ4dzC_8OspCP&si=T1mYVvB2js3tvSDI'">Check out</button>
+            </div>
+            <div class="box">
+                <img src="https://i.postimg.cc/XJFPQkq8/IMG-20250217-153757.jpg" alt="Placeholder Image">
+                <button onclick="window.location.href='https://youtube.com/playlist?list=PLXubVE5Ir37urJVvqmIhqbKe0E1CpiUfe&si=OTVB74aBgEoUmRor'">Check out</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // JavaScript to toggle hidden boxes
+        function toggleBoxes(event) {
+            event.stopPropagation(); // Prevent click from reaching document
+            const hiddenBoxes = document.getElementById("hiddenBoxes");
+            hiddenBoxes.classList.toggle("show");
+        }
+
+        // Close boxes when clicking outside
+        document.addEventListener("click", function(event) {
+            const hiddenBoxes = document.getElementById("hiddenBoxes");
+            const mainBox = document.querySelector(".main-box");
+
+            // Check if click is outside the main box and hidden boxes
+            if (!mainBox.contains(event.target) && !hiddenBoxes.contains(event.target)) {
+                hiddenBoxes.classList.remove("show");
+            }
+        });
+    </script>
+</body>
+</html>
